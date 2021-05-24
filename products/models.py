@@ -45,7 +45,7 @@ class Nutrition(models.Model):
     
 class Image(models.Model):
     image_url = models.CharField(max_length=2000)
-    product_id = models.ForeignKey('Product', on_delete = models.CASCADE)
+    product = models.ForeignKey('Product', on_delete = models.CASCADE)
         
     class Meta:
         db_table = 'images'
