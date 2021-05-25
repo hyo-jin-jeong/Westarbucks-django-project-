@@ -23,7 +23,7 @@ class Product(models.Model):
     english_name = models.CharField(max_length=45)
     description = models.TextField()
     #nutrition cascade?? protect??
-    nutrition = models.OneToOneField('Nutrition', on_delete=CASCADE)  
+    nutrition = models.OneToOneField('Nutrition', on_delete=CASCADE, related_name='product')  
 
     class Meta:
         db_table = 'products'
